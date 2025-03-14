@@ -61,9 +61,9 @@
     <div class="container">
         <h2>Join the Community</h2>
         <p>Share your ideas, report issues, or collaborate with us via GitHub.</p>
-        <!-- Direct Links to GitHub -->
-        <a href="https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/discussions" target="_blank" class="btn">Post in Discussions</a>
-        <a href="https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/issues" target="_blank" class="btn">Report an Issue</a>
+        <!-- Direct Links to GitHub Discussions and Issues -->
+        <a href="https://github.com/ApexPilot-Studios/nomad-outlaw-studios.github.io/discussions" target="_blank" class="btn">Post in Discussions</a>
+        <a href="https://github.com/ApexPilot-Studios/nomad-outlaw-studios.github.io/issues" target="_blank" class="btn">Report an Issue</a>
 
         <!-- Optional GitHub Feed Section -->
         <h2>Recent Activity</h2>
@@ -74,18 +74,16 @@
 
     <!-- Optional JavaScript for GitHub API -->
     <script>
-        // Replace with your GitHub username and repository name
-        const username = "<YOUR_USERNAME>";
-        const repo = "<YOUR_REPO>";
+        // Updated with your GitHub username and repository name
+        const username = "ApexPilot-Studios";
+        const repo = "nomad-outlaw-studios.github.io";
 
-        // Fetch Discussions (requires GitHub API token for private repos or rate-limited public access)
+        // Fetch Issues
         async function fetchGitHubData() {
             try {
-                // Fetch Issues
                 const issuesResponse = await fetch(`https://api.github.com/repos/${username}/${repo}/issues`);
                 const issues = await issuesResponse.json();
 
-                // GitHub Discussions API isn't directly available via REST; use Issues as a proxy or link-only approach
                 const feed = document.getElementById("github-feed");
                 feed.innerHTML = "";
 
